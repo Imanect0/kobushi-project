@@ -220,10 +220,16 @@ ul, li {
 }
 .area-fourth .container {
     width: 100%;
-
+    height: 100%;
+}
+.container a {
+    position: relative;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .container p {
     margin: 6px;
@@ -234,7 +240,7 @@ ul, li {
     width: 80%;
 }
 
-.area-fourth a {
+.area-fourth .group_intro> a {
     display: block;
     font-size: 20px;
     margin: 1em auto 2em
@@ -290,6 +296,11 @@ footer a {
     .whats_kobushi .text-box p, .area-third .text-box p {
         font-size:  24px;
     }
+
+    .news li a{
+        justify-content: center;
+    }
+
     .area-fourth::before, .area-fourth::after {
         display: none;
     }
@@ -471,7 +482,7 @@ footer a {
     .area-fourth .wrapper {
         width: 100%;
         height: fit-content;
-        margin: 3em 0 0 0;
+        margin: 0;
 
         display: flex;
         justify-content: space-around;
@@ -479,16 +490,26 @@ footer a {
         flex-wrap: wrap;
     }
     .area-fourth .container {
+        width: 50%;
+        height: 100%;
+    }
+    .container a {
+        position: relative;
+
         display: flex;
         flex-direction: column;
-        width: 50%;
         align-items: center;
+        width: 90%;
+        height: 100%;
+
+        margin: 0 auto;
     }
     .container span {
         display: block;
         margin: 8px 0 12px;
         font-size: 1.5vw;
         text-decoration: none;
+        text-align: center;
     }
     .container p {
         margin: 0 2em;
@@ -499,12 +520,12 @@ footer a {
         width: 60%;
     }
 
-    .area-fourth a {
+    .area-fourth .group_intro > a {
         display: block;
         position: relative;
         text-align: center;
         font-size: 2vw;
-        margin-top: 3em;
+        margin-top: 1em;
     }
 
     footer {

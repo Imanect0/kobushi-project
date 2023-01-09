@@ -27,11 +27,6 @@ ul, li {
     background-blend-mode: overlay;
 }
 
-.area-top span {
-    white-space: nowrap;
-    margin-bottom: 8em;
-}
-
 .area-top ul {
     position: absolute;
     margin: 0;
@@ -56,6 +51,8 @@ ul, li {
     left: 50%;
     transform: translateX(-50%);
     font-size: 32px;
+    white-space: nowrap;
+    margin-bottom: 8em;
 }
 
 .area-second::after {
@@ -272,10 +269,58 @@ footer a {
 
 
 
-@media (min-width: 481px) {
+@media (480px < width <= 960px) {
+    .area-top li {
+        padding-top: 10px;
+    }
+    .area-top .list-page_link {
+        font-size: 18px;
+    }
+    .area-top span {
+        font-size: 36px;
+        margin-bottom: 1em;
+    }
+
+    .whats_kobushi {
+        text-align: left;
+    }
+    .whats_kobushi .text-box div, .area-third .text-box div{
+        font-size: 36px;
+    }
+    .whats_kobushi .text-box p, .area-third .text-box p {
+        font-size:  24px;
+    }
+    .area-fourth::before, .area-fourth::after {
+        display: none;
+    }
+    .area-fourth .wrapper {
+        position: relative;
+        width: 90%;
+        left: 5%;
+        height: fit-content;
+        margin: 3em 0 0 0;
+
+        display: flex;
+        justify-content: space-around;
+        row-gap: 4em;
+        flex-wrap: wrap;
+    }
+    .area-fourth .container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+    .container span {
+        margin-top: 1em;
+    }
+    .container p {
+        margin-top: 1em;
+    }
+
 
 }
-@media (min-width: 960px) {
+@media (960px < width) {
     .area-second, .area-fourth {
         position: relative;
         width: 100%;

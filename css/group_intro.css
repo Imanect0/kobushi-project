@@ -35,13 +35,15 @@ header {
     right: 32px;
     opacity: 0;
     margin: 0;
+    z-index: 3;
 }
 .menu {
     position: fixed;
     height: 100vh;
     width: 100%;
-    top: 64px;
-    z-index: -10;
+    top: 0;
+    padding-top: 64px;
+    z-index: -1;
     background-blend-mode: overlay;
     transition: opacity 0.1s;
     background-color: rgba(132, 15, 177, 0.9);
@@ -66,6 +68,7 @@ header {
     height: 3px;
     width: 40px;
     background-color: white;
+    z-index: 2;
 }
 .menu-btn span {
     right: 42px;
@@ -98,6 +101,7 @@ header > a {
     position: relative;
     transform: translateY(50%);
     left: 1em;
+    z-index: 2;
 }
 
 .background::before, .background::after {
@@ -208,4 +212,63 @@ footer a {
     color: white;
     font-size: 20px;
     text-decoration: none;
+}
+
+
+@media (480px < width <= 960px) {
+    .background::before, .background::after {
+        content: "";
+        display: block;
+        height: auto;
+        aspect-ratio: 1;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -2;
+
+        top: -160px;
+        left: 240px;
+
+    }
+    .background::before {
+        width: 820px;
+        background-color: #E1BCF3;
+
+        box-shadow: -820px 800px #E1BCF3,
+        0 1600px #E1BCF3;
+
+    }
+    .background::after {
+        width: 600px;
+        background-color: white;
+        transform: translate(110px, 110px);
+
+        box-shadow: -820px 800px white,
+        0 1600px white;
+    }
+    .wrapper {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+    }
+    .container {
+        width: 48%;
+        height: auto;
+        margin-bottom: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (960px < width) {
+
+
 }

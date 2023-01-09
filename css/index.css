@@ -63,78 +63,52 @@ ul, li {
     bottom: 0;
 }
 
-.area-second-news {
-    text-align: left;
-    padding: 2em;
-}
-.area-second-news ul {
-    padding: 0;
-    margin: 0;
-}
-.area-second-news li {
-    display: block;
-    font-size: 16px;
-}
-.area-second-news li:not(:first-child) {
-    margin-top: 1em;
-}
-.area-second-news li a {
-    display: flex;
-    justify-content: right;
-}
-.area-second-news li a div:first-child {
-    margin: 0 5% 0 0;
-}
-.area-second-news li a div:not(:first-child){
-    word-wrap: anywhere;
-}
-
-.area-second-whats_kobushi {
+.whats_kobushi {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2em;
+
     background: rgba(255, 255, 255, 0.7) url("../img/toppage_second_side.jpg") center/cover;
     background-blend-mode: overlay;
     padding: 3em 1em;
     text-align: center;
 }
-.area-second-whats_kobushi::before {
+.whats_kobushi::before {
     position: absolute;
     content: "";
     z-index: 1;
 }
-.area-second-whats_kobushi span {
+.whats_kobushi span {
     font-size: 18px;
     text-decoration: underline;
     margin-bottom: 1em;
 }
-.area-second-whats_kobushi .wrapper {
+.whats_kobushi .wrapper {
     display: flex;
     flex-direction: column;
 }
-.area-second-whats_kobushi .text-box {
+.whats_kobushi .text-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.area-second-whats_kobushi .text-box div {
+.whats_kobushi .text-box div {
     font-weight: normal;
     font-size: 28px;
     margin: 0;
     text-align: center;
 }
-.area-second-whats_kobushi .text-box p {
+.whats_kobushi .text-box p {
     font-size: 16px;
     padding: 0 2em;
     text-align: center;
     overflow-wrap: anywhere;
 }
-.area-second-whats_kobushi .image {
+.whats_kobushi .image {
     visibility: hidden;
 }
-.area-second-whats_kobushi a {
+.whats_kobushi a {
     text-align: center;
     font-size: 24px;
 }
@@ -208,6 +182,32 @@ ul, li {
     font-size: 16px;
     text-decoration: none;
     text-align: center;
+}
+
+.news {
+    text-align: left;
+    padding: 2em;
+}
+.news ul {
+    padding: 0;
+    margin: 0;
+}
+.news li {
+    display: block;
+    font-size: 16px;
+}
+.news li:not(:first-child) {
+    margin-top: 1em;
+}
+.news li a {
+    display: flex;
+    justify-content: right;
+}
+.news li a div:first-child {
+    margin: 0 5% 0 0;
+}
+.news li a div:not(:first-child){
+    word-wrap: anywhere;
 }
 
 .area-fourth .wrapper {
@@ -304,46 +304,45 @@ footer a {
         padding-top: 12px;
     }
 
-    .area-second-news {
+    .news {
         padding: 0;
     }
     .area-second span {
         margin-right: auto;
         font-size: 1.5vw;
     }
-    .area-second-news ul {
+    .news ul {
         margin: 0 0 0 0;
     }
-    .area-second-news li {
+    .news li {
         display: block;
         font-size: 1.6vw;
     }
-    .area-second-news li:not(:first-child) {
+    .news li:not(:first-child) {
         margin-top: 1em;
     }
-    .area-second-news li div:first-child {
+    .news li div:first-child {
         margin-left: 1em;
         margin-right: 10%;
     }
-    .area-second-news li a {
+    .news li a {
         display: flex;
         justify-content: right;
     }
 
 
-    .area-second-whats_kobushi {
+    .whats_kobushi {
         position: relative;
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
-        margin-top: 4em;
 
         background: none;
         display: flex;
         flex-direction: row;
         /*justify-content: */
     }
-    .area-second-whats_kobushi .wrapper {
+    .whats_kobushi .wrapper {
         display: flex;
         height: 100%;
         width: auto;
@@ -351,22 +350,22 @@ footer a {
         flex-direction: column;
         justify-content: space-between;
     }
-    .area-second-whats_kobushi .text-box div {
+    .whats_kobushi .text-box div {
         font-weight: normal;
         font-size: 3vw;
         margin: 0;
     }
-    .area-second-whats_kobushi .text-box p {
+    .whats_kobushi .text-box p {
         margin-top: 1em;
         padding-right: 2em;
         font-size: 1.5vw;
         text-align: left;
     }
-    .area-second-whats_kobushi a {
+    .whats_kobushi a {
         margin: 0 2em 0 auto;
         font-size: 28px;
     }
-    .area-second-whats_kobushi .image {
+    .whats_kobushi .image {
         display: block;
         width: auto;
         height: 100%;

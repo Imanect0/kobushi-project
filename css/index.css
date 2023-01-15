@@ -16,55 +16,17 @@ ul, li {
 }
 
 
-.size-display {
+.area-top, .area-third {
     position: relative;
-    height: 100vh;
+    height: fit-content;
     width: 100%;
 }
-.size-content {
-    position: relative;
-    width: 100%;
-    padding: 4em 3em 2em 6em;
-}
-.size-content::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    height: 110%;
-    width: auto;
-    aspect-ratio: 1;
-    border: #E1BCF3 solid 150px;
-    border-radius: 100%;
-}
-
-span {
-    display: block;
-    margin-bottom: 0;
-}
-.text-box span {
-    font-weight: normal;
-    font-size: 40px;
-    margin: 0;
-}
-.text-box p {
-    margin-top: 2em;
-    padding-right: 1em;
-    font-size: 20px;
-}
-
-
 .area-top {
-    background: center/100vw 100vh url("../img/toppage_first_background.jpg");
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5) center/cover url("../img/toppage_first_background.jpg");
+    background-blend-mode: overlay;
 }
-.area-top::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-}
+
 .area-top ul {
     position: absolute;
     margin: 0;
@@ -89,147 +51,502 @@ span {
     left: 50%;
     transform: translateX(-50%);
     font-size: 32px;
+    white-space: nowrap;
+    margin-bottom: 8em;
 }
-
 
 .area-second::after {
     right: -40%;
     bottom: 0;
 }
 
-.area-second-news {
-    text-align: right;
-}
-.area-second-news ul {
-    margin: -1em 4em 0 0;
-}
-.area-second-news li {
-    display: block;
-    font-size: 20px;
-}
-.area-second-news li:not(:first-child) {
-    margin-top: 1em;
-}
+.whats_kobushi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-
-.area-second-whats_kobushi {
-    position: relative;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    margin-top: 4em;
-    /*padding: 4em 3em 2em 6em;*/
+    background: rgba(255, 255, 255, 0.7) url("../img/toppage_second_side.jpg") center/cover;
+    background-blend-mode: overlay;
+    padding: 3em 1em;
+    text-align: center;
 }
-.area-second-whats_kobushi .wrapper {
-    position: relative;
-    height: 85%;
-    width: 90%;
-    left: 5%;
-
-    display: grid;
-    grid:
-        "......... img" 1em
-        "......... img" 20%
-        "text      img" auto
-        "......... img" 20%
-        "show_more img" 2em
-        "......... img" 2em
-        / 45%  55%;
+.whats_kobushi::before {
+    position: absolute;
+    content: "";
+    z-index: 1;
 }
-.area-second-whats_kobushi .text-box {
-    grid-area: text;
+.whats_kobushi span {
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 1em;
 }
-.area-second-whats_kobushi a {
-    grid-area: show_more;
-    margin: 0 2em 0 auto;
+.whats_kobushi .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.whats_kobushi .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.whats_kobushi .text-box div {
+    font-weight: normal;
     font-size: 28px;
+    margin: 0;
+    text-align: center;
 }
-.area-second-whats_kobushi .image {
-    grid-area: img;
-    background-image: url("../img/toppage_second_side.jpg");
-    background-size: cover;
+.whats_kobushi .text-box p {
+    font-size: 16px;
+    padding: 0 2em;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.whats_kobushi .image {
+    visibility: hidden;
+}
+.whats_kobushi a {
+    text-align: center;
+    font-size: 24px;
+}
 
-}
 
 .area-third {
-    position: relative;
-    background: center/100vw 100vh url("../img/toppage_third_background.jpg");
+    background: rgba(255, 255, 255, 0.7) url("../img/toppage_third_background.jpg") center/cover;
+    background-blend-mode: overlay;
 }
 .area-third .text-box {
-    position: absolute;
-    height: 80%;
-    width: 50%;
-    top: 10%;
-    right: 0;
-    padding: 4em;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-.area-third a {
-    float: right;
-    margin-right: 1em;
-    font-size: 26px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-
-.area-fourth::after {
-    left: -45%;
-    bottom: 5%;
-}
-.area-fourth .wrapper {
-    width: 100%;
+    padding: 3em 0;
     height: fit-content;
-    margin-top: 3em;
+}
+.area-third .text-box div {
+    font-size: 24px;
+}
+.area-third .text-box p {
+    padding: 0 3em;
+}
+.area-third .text-box a {
+    font-size: 24px;
+}
+
+.area-fourth {
+    position: relative;
+    height: auto;
+    padding-top: 1em;
+    text-align: center;
+}
+.area-fourth::before, .area-fourth::after {
+    content: "";
+    display: block;
+    height: auto;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -2;
+
+    top: 40px;
+    left: -570px;
+
+}
+
+.area-fourth::before {
+    width: 410px;
+    background-color: #E1BCF3;
+
+    box-shadow: 410px 0 #E1BCF3,
+                750px 600px #E1BCF3,
+                410px 1200px #E1BCF3;
+}
+.area-fourth::after {
+    width: 330px;
+    background-color: white;
+    transform: translate(40px, 40px);
+
+    box-shadow: 410px 0 white,
+                750px 600px white,
+                410px 1200px white;
+}
+.area-fourth span:first-child {
+    margin: 20px 0 40px;
+}
+.area-fourth span {
+    display: block;
+    margin: 8px 0 1px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.news {
+    text-align: left;
+    padding: 2em;
+}
+.news ul {
+    padding: 0;
+    margin: 0;
+}
+.news li {
+    display: block;
+    font-size: 16px;
+}
+.news li:not(:first-child) {
+    margin-top: 1em;
+}
+.news li a {
+    display: flex;
+    justify-content: right;
+}
+.news li a div:first-child {
+    margin: 0 5% 0 0;
+}
+.news li a div:not(:first-child){
+    word-wrap: anywhere;
+}
+
+.area-fourth .wrapper {
+    width: 90%;
+    height: fit-content;
+    margin: 1em 0 0 5%;
 
     display: flex;
     justify-content: space-around;
-    row-gap: 4em;
     flex-wrap: wrap;
+    row-gap: 1em;
+
 }
 .area-fourth .container {
+    width: 100%;
+    height: 100%;
+}
+.container a {
+    position: relative;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    width: 40%;
     align-items: center;
-}
-.container span {
-    margin: 8px 0 16px;
-    font-size: 19px;
-    text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 .container p {
-    margin: 0;
+    margin: 6px;
     font-size: 12px;
     text-align: center;
 }
 .container img {
-    width: 60%;
+    width: 80%;
 }
 
-.area-fourth a {
+.area-fourth .group_intro> a {
     display: block;
-    position: relative;
-    text-align: center;
     font-size: 20px;
-    margin-top: 3em;
+    margin: 1em auto 2em
 }
+
 
 footer {
     width: 100%;
-    height: 192px;
+    height: 160px;
     background-color: #840FB1;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
 
-    padding: 2em 8em;
+    padding: 1em;
 
     color: white;
 }
 footer li:not(:first-child) {
     margin-top: 4px;
 }
+footer span {
+    margin-top: 18px;
+    font-size: 20px;
+}
 footer a {
     color: white;
     font-size: 20px;
+}
+
+
+
+
+@media (480px < width <= 960px) {
+    .area-top li {
+        padding-top: 10px;
+    }
+    .area-top .list-page_link {
+        font-size: 18px;
+    }
+    .area-top span {
+        font-size: 36px;
+        margin-bottom: 1em;
+    }
+
+    .whats_kobushi {
+        text-align: left;
+    }
+    .whats_kobushi .text-box div, .area-third .text-box div{
+        font-size: 36px;
+    }
+    .whats_kobushi .text-box p, .area-third .text-box p {
+        font-size:  24px;
+    }
+
+    .news li a{
+        justify-content: center;
+    }
+
+    .area-fourth::before, .area-fourth::after {
+        display: none;
+    }
+    .area-fourth .wrapper {
+        position: relative;
+        width: 90%;
+        left: 5%;
+        height: fit-content;
+        margin: 3em 0 0 0;
+
+        display: flex;
+        justify-content: space-around;
+        row-gap: 4em;
+        flex-wrap: wrap;
+    }
+    .area-fourth .container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+    .container span {
+        margin-top: 1em;
+    }
+    .container p {
+        margin-top: 1em;
+    }
+
+
+}
+@media (960px < width) {
+    .area-second, .area-fourth {
+        position: relative;
+        width: 100%;
+        padding: 3em 3em 2em 2em;
+    }
+    .area-second::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 110%;
+        width: auto;
+        aspect-ratio: 1;
+        border: #E1BCF3 solid 150px;
+        border-radius: 100%;
+    }
+
+    .area-top {
+        background: rgba(255, 255, 255, 0.5) url("../img/toppage_first_background.jpg") center/100vw 100vh;
+        background-size: cover;
+        background-blend-mode: overlay;
+    }
+    .area-top span {
+        margin-bottom: 0;
+    }
+    .area-top li {
+        padding-top: 12px;
+    }
+
+    .news {
+        padding: 0;
+    }
+    .area-second span {
+        margin-right: auto;
+        font-size: 1.5vw;
+    }
+    .news ul {
+        margin: 0 0 0 0;
+    }
+    .news li {
+        display: block;
+        font-size: 1.6vw;
+    }
+    .news li:not(:first-child) {
+        margin-top: 1em;
+    }
+    .news li div:first-child {
+        margin-left: 1em;
+        margin-right: 10%;
+    }
+    .news li a {
+        display: flex;
+        justify-content: right;
+    }
+
+
+    .whats_kobushi {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+
+        background: none;
+        display: flex;
+        flex-direction: row;
+        /*justify-content: */
+    }
+    .whats_kobushi .wrapper {
+        display: flex;
+        height: 100%;
+        width: auto;
+        left: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .whats_kobushi .text-box div {
+        font-weight: normal;
+        font-size: 3vw;
+        margin: 0;
+    }
+    .whats_kobushi .text-box p {
+        margin-top: 1em;
+        padding-right: 2em;
+        font-size: 1.5vw;
+        text-align: left;
+    }
+    .whats_kobushi a {
+        margin: 0 2em 0 auto;
+        font-size: 28px;
+    }
+    .whats_kobushi .image {
+        display: block;
+        width: auto;
+        height: 100%;
+        aspect-ratio: 1;
+        
+        visibility: visible;
+        background-image: url("../img/toppage_second_side.jpg");
+        background-size: cover;
+    }
+
+    .area-third {
+        background: center/100vw 100vh url("../img/toppage_third_background.jpg");
+        height: 100vh;
+    }
+    .area-third .text-box {
+        position: absolute;
+        height: 80%;
+        width: 50%;
+        top: 10%;
+        right: 0;
+        padding: 64px 8px 0;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .area-third .text-box div {
+        font-size: 2.5vw;
+        margin-bottom: 16px;
+    }
+    .area-third p {
+        margin-bottom: auto;
+        font-size: 1.7vw;
+        line-height: 1.6em;
+    }
+    .area-third .text-box a {
+        font-size: 2.3vw;
+        margin-right: 3em;
+        margin-bottom: 2em;
+        margin-left: auto;
+    }
+
+    .area-fourth {
+        padding: 4em 4em 1em;
+    }
+    .area-fourth::before, .area-fourth::after {
+        box-shadow: none;
+        top: -170px;
+        left: -500px;
+    }
+    .area-fourth::before {
+        width: 105%;
+    }
+    .area-fourth::after {
+        transform: translate(110px, 110px);
+        width: calc(105% - 220px);
+    }
+    .area-fourth span {
+        text-align: left;
+    }
+    .area-fourth .wrapper {
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+
+        display: flex;
+        justify-content: space-around;
+        row-gap: 4em;
+        flex-wrap: wrap;
+    }
+    .area-fourth .container {
+        width: 50%;
+        height: 100%;
+    }
+    .container a {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+
+        margin: 0 auto;
+    }
+    .container span {
+        display: block;
+        margin: 8px 0 12px;
+        font-size: 1.5vw;
+        text-decoration: none;
+        text-align: center;
+    }
+    .container p {
+        margin: 0 2em;
+        font-size: 1.1vw;
+        text-align: center;
+    }
+    .container img {
+        width: 60%;
+    }
+
+    .area-fourth .group_intro > a {
+        display: block;
+        position: relative;
+        text-align: center;
+        font-size: 2vw;
+        margin-top: 1em;
+    }
+
+    footer {
+        width: 100%;
+        height: 192px;
+        background-color: #840FB1;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding: 1em 12em;
+
+        color: white;
+    }
+    footer li:not(:first-child) {
+        margin-top: 4px;
+    }
+    footer a {
+        color: white;
+        font-size: 1.5vw;
+    }
+
 }

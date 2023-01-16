@@ -1,10 +1,15 @@
-// 読み込みが完了したら 
-// 1秒後にテキストをcomplete!に変える
-// 2秒後に要素を隠し始める(詳細なアニメーションの遅延等はCSS)
-// 3.5秒後にスクロールロックを外す
+const text = document.getElementById("load-text");
+const loading = document.getElementById("loading");
+
+let amount_period = 0;
+const interval = window.setInterval(function (){
+    text.textContent = `loading${'.'.repeat(amount_period)}`;
+    amount_period === 3 ? amount_period = 0 : amount_period++;
+}, 1000);
 
 window.onload = function(){
-    window.setTimeout(function(){document.getElementById("load-text").textContent = "complete!";}, 1000)
-    window.setTimeout(function(){document.getElementById("loading").classList.add("hide");}, 2000);
+    clearInterval(interval);
+    window.setTimeout(function(){text.textContent = "complete!";}, 1000)
+    window.setTimeout(function(){loading.classList.add("hide");}, 2000);
     window.setTimeout(function(){document.body.classList.remove("scroll_lock");}, 3500);
 }

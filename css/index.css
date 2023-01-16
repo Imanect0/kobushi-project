@@ -1,6 +1,9 @@
 body {
     margin: 0;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 main {
     overflow: hidden;
 }
@@ -13,6 +16,43 @@ a {
 }
 ul, li {
     display: block;
+}
+
+
+
+#loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    user-select: none;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in 1s;
+}
+#logo {
+    height: 40%;
+    aspect-ratio: 1;
+}
+#loading * {
+    transition: opacity 1s linear;
+}
+#load-text {
+    transform: translateY(calc(100vh * -0.08));
+}
+.hide, .hide *{
+    opacity: 0;
+
+}
+.scroll_lock {
+    overflow: hidden;
 }
 
 

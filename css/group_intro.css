@@ -249,6 +249,7 @@ footer a {
         width: 100%;
         height: fit-content;
 
+        padding: 0 3em;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -257,7 +258,7 @@ footer a {
         gap: 2em;
     }
     .container {
-        width: 48%;
+        width: 45%;
         height: auto;
         margin-bottom: auto;
 
@@ -297,8 +298,6 @@ footer a {
         display: flex;
         flex-direction: row;
         justify-content: right;
-
-
     }
     header li {
         margin: 0 1em;

@@ -312,7 +312,41 @@ footer a {
     font-size: 20px;
 }
 
+.fadeInUp {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 1000ms;
+	}
 
+/* 画面内に入った状態 */
+.fadeInUp.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+    .fadeInRight {
+        opacity : 0.1;
+        transform : translate(50px, 0px);
+        transition : all 1000ms;
+        }
+    
+    /* 画面内に入った状態 */
+    .fadeInRight.scrollin {
+        opacity : 1;
+        transform : translate(0, 0);
+        }
+
+        .fadeInLeft {
+            opacity : 0.1;
+            transform : translate(-50px, 0px);
+            transition : all 1000ms;
+            }
+        
+        /* 画面内に入った状態 */
+        .fadeInLeft.scrollin {
+            opacity : 1;
+            transform : translate(0, 0);
+            }
 
 
 @media (480px < width <= 960px) {

@@ -1,0 +1,626 @@
+body {
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+main {
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul, li {
+    display: block;
+}
+
+
+
+#loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    user-select: none;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in 1s;
+}
+#logo {
+    height: 40%;
+    aspect-ratio: 1;
+}
+#loading * {
+    transition: opacity 1s linear;
+}
+#load-text {
+    transform: translateY(calc(100vh * -0.08));
+}
+.hide, .hide *{
+    opacity: 0;
+
+}
+.scroll_lock {
+    overflow: hidden;
+}
+
+
+.area-top, .area-third {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}
+.area-top {
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5) center/cover url("../img/toppage_first_background.jpg");
+    background-blend-mode: overlay;
+}
+
+.area-top ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.area-top li {
+    padding-top: 5px;
+    padding-left: 2em;
+}
+.area-top li:first-child {
+    padding-top: 2em;
+}
+.list-page_link {
+    color: black;
+}
+.list-display_size {
+    color: #D0CFD1;
+}
+.area-top span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    white-space: nowrap;
+    margin-bottom: 8em;
+}
+
+.area-second::after {
+    right: -40%;
+    bottom: 0;
+}
+
+.whats_kobushi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.7) url("../img/toppage_second_side.jpg") center/cover;
+    background-blend-mode: overlay;
+    padding: 3em 1em;
+    text-align: center;
+}
+.whats_kobushi::before {
+    position: absolute;
+    content: "";
+    z-index: 1;
+}
+.whats_kobushi span {
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+.whats_kobushi .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.whats_kobushi .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.whats_kobushi .text-box div {
+    font-weight: normal;
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+}
+.whats_kobushi .text-box p {
+    font-size: 16px;
+    padding: 0 2em;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.whats_kobushi .image {
+    visibility: hidden;
+}
+.whats_kobushi a {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.area-third {
+    background: rgba(255, 255, 255, 0.7) url("../img/toppage_third_background.jpg") center/cover;
+    background-blend-mode: overlay;
+}
+.area-third .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 3em 0;
+    height: fit-content;
+}
+.area-third .text-box div {
+    font-size: 24px;
+}
+.area-third .text-box p {
+    padding: 0 3em;
+}
+.area-third .text-box a {
+    font-size: 24px;
+}
+
+.area-fourth {
+    position: relative;
+    height: auto;
+    padding-top: 1em;
+    text-align: center;
+}
+.area-fourth::before, .area-fourth::after {
+    content: "";
+    display: block;
+    height: auto;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -2;
+
+    top: 40px;
+    left: -570px;
+
+}
+
+.area-fourth::before {
+    width: 410px;
+    background-color: #E1BCF3;
+
+    box-shadow: 410px 0 #E1BCF3,
+                750px 600px #E1BCF3,
+                410px 1200px #E1BCF3;
+}
+.area-fourth::after {
+    width: 330px;
+    background-color: white;
+    transform: translate(40px, 40px);
+
+    box-shadow: 410px 0 white,
+                750px 600px white,
+                410px 1200px white;
+}
+.area-fourth span:first-child {
+    margin: 20px 0 40px;
+}
+.area-fourth span {
+    display: block;
+    margin: 8px 0 1px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.news {
+    text-align: left;
+    padding: 2em;
+}
+.news ul {
+    padding: 0;
+    margin: 0;
+}
+.news li {
+    display: block;
+    font-size: 16px;
+}
+.news li:not(:first-child) {
+    margin-top: 1em;
+}
+.news li a {
+    display: flex;
+    justify-content: right;
+}
+.news li a div:first-child {
+    margin: 0 5% 0 0;
+}
+.news li a div:not(:first-child){
+    word-wrap: anywhere;
+}
+
+.area-fourth .wrapper {
+    width: 90%;
+    height: fit-content;
+    margin: 1em 0 0 5%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 1em;
+
+}
+.area-fourth .container {
+    width: 100%;
+    height: 100%;
+}
+.container a {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container p {
+    margin: 6px;
+    font-size: 12px;
+    text-align: center;
+}
+.container img {
+    width: 80%;
+}
+
+.area-fourth .group_intro> a {
+    display: block;
+    font-size: 20px;
+    margin: 1em auto 2em
+}
+
+
+footer {
+    width: 100%;
+    height: 160px;
+    background-color: #840FB1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    padding: 1em;
+
+    color: white;
+}
+footer li:not(:first-child) {
+    margin-top: 4px;
+}
+footer span {
+    margin-top: 18px;
+    font-size: 20px;
+}
+footer a {
+    color: white;
+    font-size: 20px;
+}
+
+.fadeInUp {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 1000ms;
+	}
+
+/* 画面内に入った状態 */
+.fadeInUp.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+    .fadeInRight {
+        opacity : 0.1;
+        transform : translate(50px, 0px);
+        transition : all 1000ms;
+        }
+    
+    /* 画面内に入った状態 */
+    .fadeInRight.scrollin {
+        opacity : 1;
+        transform : translate(0, 0);
+        }
+
+        .fadeInLeft {
+            opacity : 0.1;
+            transform : translate(-50px, 0px);
+            transition : all 1000ms;
+            }
+        
+        /* 画面内に入った状態 */
+        .fadeInLeft.scrollin {
+            opacity : 1;
+            transform : translate(0, 0);
+            }
+
+
+@media (480px < width <= 960px) {
+    .area-top li {
+        padding-top: 10px;
+    }
+    .area-top .list-page_link {
+        font-size: 18px;
+    }
+    .area-top span {
+        font-size: 36px;
+        margin-bottom: 1em;
+    }
+
+    .whats_kobushi {
+        text-align: left;
+    }
+    .whats_kobushi .text-box div, .area-third .text-box div{
+        font-size: 36px;
+    }
+    .whats_kobushi .text-box p, .area-third .text-box p {
+        font-size:  24px;
+    }
+
+    .news li a{
+        justify-content: center;
+    }
+
+    .area-fourth::before, .area-fourth::after {
+        display: none;
+    }
+    .area-fourth .wrapper {
+        position: relative;
+        width: 90%;
+        left: 5%;
+        height: fit-content;
+        margin: 3em 0 0 0;
+
+        display: flex;
+        justify-content: space-around;
+        row-gap: 4em;
+        flex-wrap: wrap;
+    }
+    .area-fourth .container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+    .container span {
+        margin-top: 1em;
+    }
+    .container p {
+        margin-top: 1em;
+    }
+
+
+}
+@media (960px < width) {
+    .area-second, .area-fourth {
+        position: relative;
+        width: 100%;
+        padding: 3em 3em 2em 2em;
+    }
+    .area-second::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        height: 110%;
+        width: auto;
+        aspect-ratio: 1;
+        border: #E1BCF3 solid 150px;
+        border-radius: 100%;
+    }
+
+    .area-top {
+        background: rgba(255, 255, 255, 0.5) url("../img/toppage_first_background.jpg") center/100vw 100vh;
+        background-size: cover;
+        background-blend-mode: overlay;
+    }
+    .area-top span {
+        margin-bottom: 0;
+    }
+    .area-top li {
+        padding-top: 12px;
+    }
+
+    .news {
+        padding: 0;
+    }
+    .area-second span {
+        margin-right: auto;
+        font-size: 1.5vw;
+    }
+    .news ul {
+        margin: 0 0 0 0;
+    }
+    .news li {
+        display: block;
+        font-size: 1.6vw;
+    }
+    .news li:not(:first-child) {
+        margin-top: 1em;
+    }
+    .news li div:first-child {
+        margin-left: 1em;
+        margin-right: 10%;
+    }
+    .news li a {
+        display: flex;
+        justify-content: right;
+    }
+
+
+    .whats_kobushi {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+
+        background: none;
+        display: flex;
+        flex-direction: row;
+        /*justify-content: */
+    }
+    .whats_kobushi .wrapper {
+        display: flex;
+        height: 100%;
+        width: auto;
+        left: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .whats_kobushi .text-box div {
+        font-weight: normal;
+        font-size: 3vw;
+        margin: 0;
+    }
+    .whats_kobushi .text-box p {
+        margin-top: 1em;
+        padding-right: 2em;
+        font-size: 1.5vw;
+        text-align: left;
+    }
+    .whats_kobushi a {
+        margin: 0 2em 0 auto;
+        font-size: 28px;
+    }
+    .whats_kobushi .image {
+        display: block;
+        width: auto;
+        height: 100%;
+        aspect-ratio: 1;
+        
+        visibility: visible;
+        background-image: url("../img/toppage_second_side.jpg");
+        background-size: cover;
+    }
+
+    .area-third {
+        background: center/100vw 100vh url("../img/toppage_third_background.jpg");
+        height: 100vh;
+    }
+    .area-third .text-box {
+        position: absolute;
+        height: 80%;
+        width: 50%;
+        top: 10%;
+        right: 0;
+        padding: 64px 8px 0;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .area-third .text-box div {
+        font-size: 2.5vw;
+        margin-bottom: 16px;
+    }
+    .area-third p {
+        margin-bottom: auto;
+        font-size: 1.7vw;
+        line-height: 1.6em;
+    }
+    .area-third .text-box a {
+        font-size: 2.3vw;
+        margin-right: 3em;
+        margin-bottom: 2em;
+        margin-left: auto;
+    }
+
+    .area-fourth {
+        padding: 4em 4em 1em;
+    }
+    .area-fourth::before, .area-fourth::after {
+        box-shadow: none;
+        top: -170px;
+        left: -500px;
+    }
+    .area-fourth::before {
+        width: 105%;
+    }
+    .area-fourth::after {
+        transform: translate(110px, 110px);
+        width: calc(105% - 220px);
+    }
+    .area-fourth span {
+        text-align: left;
+    }
+    .area-fourth .wrapper {
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+
+        display: flex;
+        justify-content: space-around;
+        row-gap: 4em;
+        flex-wrap: wrap;
+    }
+    .area-fourth .container {
+        width: 50%;
+        height: 100%;
+    }
+    .container a {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+
+        margin: 0 auto;
+    }
+    .container span {
+        display: block;
+        margin: 8px 0 12px;
+        font-size: 1.5vw;
+        text-decoration: none;
+        text-align: center;
+    }
+    .container p {
+        margin: 0 2em;
+        font-size: 1.1vw;
+        text-align: center;
+    }
+    .container img {
+        width: 60%;
+    }
+
+    .area-fourth .group_intro > a {
+        display: block;
+        position: relative;
+        text-align: center;
+        font-size: 2vw;
+        margin-top: 1em;
+    }
+
+    footer {
+        width: 100%;
+        height: 192px;
+        background-color: #840FB1;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding: 1em 12em;
+
+        color: white;
+    }
+    footer li:not(:first-child) {
+        margin-top: 4px;
+    }
+    footer a {
+        color: white;
+        font-size: 1.5vw;
+    }
+
+}

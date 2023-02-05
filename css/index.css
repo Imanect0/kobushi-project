@@ -35,7 +35,7 @@ ul, li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.5s ease-in 1s;
+    transition: opacity 0.5s ease-in 1s, z-index 0s 1.5s;
 }
 #logo {
     height: 40%;
@@ -47,9 +47,9 @@ ul, li {
 #load-text {
     transform: translateY(calc(100vh * -0.08));
 }
-.hide, .hide *{
+.hide, .hide *, #loading.hide{
     opacity: 0;
-
+    z-index: -10;
 }
 .scroll_lock {
     overflow: hidden;
@@ -312,7 +312,41 @@ footer a {
     font-size: 20px;
 }
 
+.fadeInUp {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 1000ms;
+	}
 
+/* 画面内に入った状態 */
+.fadeInUp.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+    .fadeInRight {
+        opacity : 0.1;
+        transform : translate(50px, 0px);
+        transition : all 1000ms;
+        }
+    
+    /* 画面内に入った状態 */
+    .fadeInRight.scrollin {
+        opacity : 1;
+        transform : translate(0, 0);
+        }
+
+        .fadeInLeft {
+            opacity : 0.1;
+            transform : translate(-50px, 0px);
+            transition : all 1000ms;
+            }
+        
+        /* 画面内に入った状態 */
+        .fadeInLeft.scrollin {
+            opacity : 1;
+            transform : translate(0, 0);
+            }
 
 
 @media (480px < width <= 960px) {

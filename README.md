@@ -1,1 +1,0 @@
-# kobushi-project

@@ -157,14 +157,15 @@ h2 {
 .container {
     width: 92%;
     height: fit-content;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .container img {
     width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .container span {
     display: block;
@@ -183,6 +184,7 @@ h2 {
     text-decoration: none;
     margin-top: 12px;
     font-size: 18px;
+    display: block;
 }
 
 footer {

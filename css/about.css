@@ -64,7 +64,7 @@ p{
 }
 .name{
     display: flex;
-    margin: 2.3rem;
+    margin: 1.9rem;
 }
 .name p{
     display:inline-block;
@@ -220,11 +220,12 @@ footer a {
     }
     
     /*main*/
-    .main .pic{
+    .main img{
         display: none;
     }
     .main h2{
         font-weight: bold;
+        margin: 0;
     }
     .main .br{
         overflow-wrap: normal;
@@ -349,18 +350,18 @@ footer a {
         height: 100%;
         margin-bottom: 5rem;
     }
-    .main .pic{
+    .main img{
         display: none;
     }
     .main h2{
         font-weight: bold;
-        margin: 5rem 0 3rem 0;
+        margin: 0;
     }
     .main .br{
         overflow-wrap: normal;
         width: 100%;
-        font-size: 1.3rem;
-        line-height: 1.6;
-        margin: 2rem 2rem 3rem 2rem;
+        font-size: 1.1rem;
+        line-height: 1.2;
+        margin: 1.3rem;
     }
 }

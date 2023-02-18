@@ -39,61 +39,27 @@ header .head a:nth-of-type(1){
 }
 
 .main h1{
-    text-align:center;
-    margin:60px;
-    font-weight: 10;
+    text-align: right;
+    margin:2rem 5% 0 0 ;
 }
 
-.main .text{
-    font-size: 20px;
-    padding-bottom:2rem;
+.main h2{
+    font-size: 2rem;
+    letter-spacing:0.2rem;
+    text-align: center;
+}
+
+.main img{
+    margin:5rem 0 0 20%;
+    padding:0;
 }
 
 .main p{
-    font-size:1.2rem;
-    padding-left:8rem;
+    font-size:2rem;
+    overflow-wrap: break-word;
+    width:80%;
+    margin:3rem 0 0 10% ;
 }
-
-
-
-
-input{
-    height:2rem;
-    width :80%;
-    margin-left:8rem;
-    padding-bottom:0.4rem;
-}
-#message input{
-    height:10rem;
-    margin-bottom:3rem;
-   
-}
-
-button {
-    font-size:1.5rem;
-    height:100%;
-    width:5rem;
-    text-align: center;
-    background-color: white;
-    margin:0 0 0 80%;
-    
-    
-}
-
-#sent{
-    display: none; 
-    font-size: 1.5rem;
-    text-align: center;
-    padding:10% 0 10% 0;
-    line-height: 3.5rem;
-}
-#mainnone{
-    display:block
-}
-
-
-
-
 
 footer {
     width: 100%;
@@ -124,6 +90,8 @@ footer a {
 }
 footer li{
     list-style: none;
+
+
 }
 
 @media screen and (max-width: 980px){
@@ -235,24 +203,32 @@ footer li{
         left: 0;
     }
 
-    .main p{
-       padding:0;
-       margin:0 0 0 10%;
-       
+    .main h1{
+        text-align: right;
+        margin:2rem 5% 0 0 ;
+        font-size: 1.2rem;
     }
-    .main .text{
+    
+    .main h2{
+        font-size: 1rem;
         text-align: center;
+        margin:3rem 0 0 0;
     }
-    input{
+    
+    .main img{
+        margin:5rem 0 0 20%;
         padding:0;
-        margin:0 0 0 10%;
+        width:60%;
     }
-
-    #sent{
-        padding:45% 0 45% 0;
-        font-size: 2.8rem;
-        line-height: 8rem;
+    
+    .main p{
+        font-size:1.5rem;
+        line-height: 1.5rem;
+        overflow-wrap: break-word;
+        width:70%;
+        margin:3rem 0 1rem 15% ;
     }
+  
 }
 
 @media screen and (max-width: 480px){
@@ -291,15 +267,7 @@ footer li{
         padding:0.3rem 0 0.3rem 0;
     }
 
-    .main #button{
-        text-align: center;
-        padding:0;
-        margin:0;
-    }
-    .main #button input{
-        padding:0;
-        margin:0;
-    }
+   
 
     .menu{
         display: block;
@@ -393,16 +361,29 @@ footer li{
         left: 0;
     }
 
-    button{
-        margin:0 0 0 70%;
-        width:4rem;
-        height:2rem;
-        font-size: 1.4rem;
+    .main h1{
+        text-align: left;
+        margin:2rem 0 0 2rem ;
+        font-size: 1rem;
     }
-
-    #sent{
-        padding:50% 0 50% 0;
-        font-size: 2rem;
-        line-height: 4rem;
+    
+    .main h2{
+        font-size: 0.8rem;
+        text-align: center;
+        margin:1rem 0 0 0;
+    }
+    
+    .main img{
+        margin:2rem 0 0 20%;
+        padding:0;
+        width:60%;
+    }
+    
+    .main p{
+        font-size:1rem;
+        line-height: 1.5rem;
+        overflow-wrap: break-word;
+        width:70%;
+        margin:1rem 0 1rem 15% ;
     }
 }

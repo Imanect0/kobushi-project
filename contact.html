@@ -5,37 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    
 </head>
 <body>
-    <header>
-        <div class="head">
-             <a href="index.html">コブシプロジェクト</a>
-             <a href="index.html">概要</a>
-             <a href="group_intro.html">団体紹介</a>
-             <a href="contact.html">お問い合わせ</a>
+        <header>
+            <div class="head">
+                 <a href="">コブシプロジェクト</a>
+                 <a href="">概要</a>
+                 <a href="">団体紹介</a>
+                 <a href="">お問い合わせ</a>
+            </div>
+    
+            <div class="menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="">コブシプロジェクト</a>
+                        </li>
+                        <li>
+                            <a href="">概要</a>
+                        </li>
+                        <li>
+                            <a href="">団体紹介</a>
+                        </li>
+                        <li>
+                            <a href="">お問い合わせ</a>
+                        </li>
+                        <li>
+                            <a href="https://www.ichinoseki.ac.jp/%22%3E一関高専HP">一関高専HP</a>
+                        </li>
+                    </ul>
+                </div>
+        </div></header>
+    
+        <div class="main">
+            <div id="mainnone">
+            <h1>お問い合わせ</h1>
+            <p class="text">必要な情報を入力して送信ボタンを押してください</p>
+            <p>お名前</p>
+            <input type="text" id="name" name="name" required="" minlength="4" maxlength="16">
+            <p>メールアドレス</p>
+            <input type="email" id="email" pattern=".+@globex\.com" required="">
+            <p>お問い合わせの団体</p>
+            <input type="text" id="name" name="name" required="" minlength="4" maxlength="100">
+            <p>お問い合わせ内容</p>
+            <div id="message">
+                <input type="text" id="name" name="name" required="" minlength="4" maxlength="300">
+            </div>
+            <div id="button">
+                <button type="button" id="click" onclick="set_display();">送信</button>
+            </div>
+            </div>
+            <div id="sent">送信されました。<br>ありがとうございます。</div>
+    
+            <script language="javascript" type="text/javascript">
+                function set_display() {
+                    document.getElementById('sent').style.display = 'block'
+                    document.getElementById('mainnone').style.display = 'none'
+                }
+            </script>
+            
         </div>
-    </header>
-
-    <div class="main">
-        <h1>お問い合わせ</h1>
-        <p class="text">必要な情報を入力して送信ボタンを押してください</p>
-        <p>お名前</p>
-        <p>メールアドレス</p>
-        <p>お問い合わせの団体</p>
-        <p>お問い合わせ内容</p>
-    </div>
-
-    <footer>
-        <div class="list1">
-            <a href="">コブシプロジェクト</a>
-        </div>
-        <div class="list2">
-            <a href="index.html">概要</a>
-            <a href="contact.html">お問い合わせ</a>
-            <a href="https://www.ichinoseki.ac.jp/">一関高専HP</a>
-        </div>
-        
-    </footer>
+    
+        <footer>
+            <span>コブシプロジェクト</span>
+            <ul>
+                <li><a href="">概要</a></li>
+                <li><a href="">お問い合わせ</a></li>
+                <li><a href="https://www.ichinoseki.ac.jp/%22%3E一関高専HP">一関高専HP</a></li>
+            </ul>
+        </footer>
+    
 </body>
+
 </html>

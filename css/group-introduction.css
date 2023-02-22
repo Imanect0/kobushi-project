@@ -55,33 +55,35 @@ header .top a:nth-of-type(4){
     width: 100%;
     height: 100%;
     margin: 5rem 0 3.1rem 0;
+    text-align: center;
 }
 .home-content .text{
     width: 60%;
     height: 100%;
     padding: 5rem;
+    text-align: left;
 }
 .home-content h1{
     font-size: 2.2rem;
-    text-align: center;
 }
-.home-content p{
+.home-content .what{
     margin: 2.5rem;
     font-size: 1.7rem;
     line-height: 1.3;
     overflow-wrap: normal;
+    text-align: left;
 }
 .home-content .name{
-    margin-left: 30rem;
+    font-size: 1.7rem;
+    text-align: right;
 }
 .home-content .picture{
-    width: 30%;
-    margin: 4rem;
+    width: 40%;
+    padding: 2rem;    
 }
 .home-content .picture img{
-    width:100%;
+    width: 100%;
     height: 90%;
-    margin: 0 1rem 0 4rem;
 }
 
 
@@ -101,16 +103,24 @@ header .top a:nth-of-type(4){
 }
 .sub-content .container{
     display: flex;
-    margin-left: 9.4rem;
+    margin: 2rem;
 }
 .sub-content img{
-    width: 31.3rem;
-    height: 18.8rem;
-    margin: 1.3rem 5.6rem 1.3rem 0;
+    width: 70%;
+    height: 70%;
 }
-.sub-content .text{
+.sub-content .one{
     font-size:1.3rem;
-    margin: 1.3rem 6.3rem 0 1.3rem;
+    margin: 3rem;
+    text-align: center;
+    flex: 1;
+}
+.text{
+    margin: 1rem;
+    text-align: left;
+}
+.text p{
+    overflow-wrap: normal;
 }
 
 /*footer*/
@@ -258,66 +268,45 @@ footer a {
 
     /*home-content*/
     .home-content{
-        display:flex;
         width: 100%;
         height: 100%;
-        margin: 2rem 0 3.1rem 0;
+        margin: 0;
+        padding: 0;
     }
     .home-content .text{
-        width: 60%;
-        height: 100%;
-        padding: 3rem 2rem 3rem 2rem;
+        padding: 2rem;
+    }
+    .home-content .what{
+        font-size: 1.1rem;
+        margin: 1rem;
+    }
+    .home-content .name{
+        font-size: 1.1rem;
     }
     .home-content h1{
         font-size: 1.5rem;
-        text-align: center;
-    }
-    .home-content p{
-        margin: 1.3rem 0 1.3rem 0;
-        font-size: 0.9rem;
-        line-height: 1.3;
-        overflow-wrap: normal;
-    }
-    .home-content .name{
-        margin-left: 14rem;
+        font-weight: bold;
+        margin: 0;
     }
     .home-content .picture{
-        width: 40%;
-        margin: 3rem;
+        width: 50%;
     }
     .home-content .picture img{
         width: 100%;
-        height: 80%;
-        margin: 0 0 0 1rem;
+        height: 70%;
     }
 
-
-    /*sub-content*/
-    .sub-content .container{
-        display: flex;
-        margin: 1rem;
+    /* sub-content */
+    .sub-content h2{
+        font-size: 1.5rem;
     }
     .sub-content img{
-        width: 20rem;
-        height: 12rem;
-        margin: 1.4rem 0 1.4rem 0;
-        text-align: center;
-    }
-    .sub-content .text{
-        font-size:1.3rem;
-        margin: 1.3rem 0 3rem 0;
-        text-align: center;
-    }
-    .text span{
         width: 100%;
-        margin: 0 13rem 0 0;
+        height: 60%;
     }
-    .sub-content .text p{
-        width: 80%;
-        margin: 0.2rem 1rem 0 2rem;
-        font-size: 1rem;
-        text-align: left;
-        overflow-wrap: normal;
+    .sub-content .one{
+        font-size:1.1rem;
+        margin: 1.5rem;
     }
 }
 
@@ -440,59 +429,50 @@ footer a {
         display: block;
         width: 100%;
         height: 100%;
-        margin: 1rem 0 1rem 0;
-    }
-    .home-content img{
-        display: none;
-    }
-    .home-content .text{
-        width: 100%;
+        margin: 0;
         padding: 0;
     }
+    .home-content .picture{
+        display: none;
+    }
     .home-content h1{
-        font-size: 1rem;
-        margin: 0 0 0 0.6rem;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
         font-weight: bold;
-        line-height: 1.3;
-        text-align: center;
     }
-    .home-content p{
-        font-size: 0.8rem;
-        margin: 1.3rem;
-        line-height: 1.5;
-    } 
+    .home-content .text{
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+    .home-content .what{
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.1rem;
+    }
     .home-content .name{
-        margin: 1.3rem 0 1.9rem 15rem;
-        font-size:1rem;
-    }
-    #menu-btn-check:checked ~ .menu-content {
-        left: 0;
+        font-size: 1.1rem;
     }
 
-    /*sub-content*/
-    .sub-content{
-        background-color: rgb(244, 243, 243);
-        width: 100%;
-        height: 100%;
-    }
+    /* sub-content */
+    
     .sub-content .container{
         display: block;
         margin: 0;
+        padding: 1rem;
     }
-    .sub-content img{
-        width: 19rem;
-        height: 11rem;
-        margin: 1.3rem 0 0.6rem 0;
+    .sub-content h2{
+        font-size: 1.5rem;
     }
     .sub-content .text{
-        font-size:0.8rem;
-        margin: 1rem 3.1rem 1rem 3.1rem;
+        width: 100%;
     }
-    .sub-content span{
-        text-align: left;
-    }
-    .sub-content p{
-        text-align: center;
+    .sub-content img{
+        width:100%;
+        height: 100%;
     }
     
     /*footer*/

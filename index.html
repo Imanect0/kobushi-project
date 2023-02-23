@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
         <title>コブシプロジェクトポータルサイト</title>
         <link rel="stylesheet" href="css/index.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </head>
     <body class="scroll_lock">
         <div id="loading">
@@ -26,7 +25,7 @@
             </div>
             <div class="area-second">
                 <div class="whats_kobushi">
-                    <div class="wrapper fadeInLeft">
+                    <div class="wrapper fadeIn fadeInLeft">
                         <span><a name="whats">WHAT'S コブシプロジェクト</a></span>
                         <div class="text-box">
                             <div>コブシプロジェクト</div>
@@ -35,11 +34,11 @@
                         </div>
                         <a href="./about.html">Show More ></a>
                     </div>
-                    <div class="image fadeInRight"></div>
+                    <div class="image fadeIn fadeInRight"></div>
                 </div>
             </div>
             <div class="area-third">
-                <div class="text-box fadeInRight">
+                <div class="text-box fadeIn fadeInRight">
                         <div>コブシを突き上げたその先へ</div>
                         <p>いきなりですが皆様のコブシは何のためにあると思いますか?単なるジャンケンの道具?はたまた人を攻撃するための手段?違います。未来に向けて突き上げるものです。今回一関高専学生会によって行われるコブシプロジェクトの一環として行われる当プロジェクト。私たちも未来へ向けて拳を突き上げてみました。皆様もその拳の行く先を見てみませんか?</p>
                         <a href="./about.html">Show More ></a>
@@ -60,28 +59,28 @@
                 <div class="group_intro">
                     <span><a name="group_intro">団体紹介</a></span>
                     <div class="wrapper">
-                        <div class="container fadeInUp">
+                        <div class="container fadeIn fadeInUp">
                             <a href="./group-introduction/video.html">
                                 <img src="img/sample.png" alt="">
                                 <span>映像研究会</span>
                                 <p>PR動画を作成することで地域活性化につなげる。<br>一関高専や一関市のホームページ・Youtubeへの掲載を目指す。</p>
                             </a>
                         </div>
-                        <div class="container fadeInUp">
+                        <div class="container fadeIn fadeInUp">
                             <a href="./group-introduction/ITs.html">
                                 <img src="img/sample.png" alt="">
                                 <span>ITs Information Technology</span>
                                 <p>web、AI、IoTを中心に｢アイデアを形に。｣をモットーに<br>多様なアイデアを実装する。</p>
                             </a>
                         </div>
-                        <div class="container fadeInUp">
+                        <div class="container fadeIn fadeInUp">
                             <a href="./group-introduction/IoT.html">
                                 <img src="img/sample.png" alt="">
                                 <span>IoT技術を用いたセンシングモジュールの開発と<br>サイネージ生成および体験会実施<br>電子楽器｢Analog2.0｣の作成と演奏体験の実施</span>
                                 <p>センシングモジュール等を作成し、学生の技術や知識で学生が｢できること｣を示し、学生の持つ可能性を意識してもらう。</p>
                             </a>
                         </div>
-                        <div class="container fadeInUp">
+                        <div class="container fadeIn fadeInUp">
                             <a href="./group-introduction/NITIC.html">
                                 <img src="img/sample.png" alt="">
                                 <span>一関高専60年つながるプロジェクト</span>
@@ -103,46 +102,8 @@
             </ul>
         </footer>
 
-        <script src="js/loading.js"></script>
-        <script language="javascript" type="text/javascript">
-            $(function(){
-	$(window).scroll(function (){
-		$('.fadeInUp').each(function(){
-			var elemPos = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll > elemPos - windowHeight + 200){
-				$(this).addClass('scrollin');
-			}
-		});
-	});
-});
-
-$(function(){
-	$(window).scroll(function (){
-		$('.fadeInRight').each(function(){
-			var elemPos = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll > elemPos - windowHeight + 300){
-				$(this).addClass('scrollin');
-			}
-		});
-	});
-});
-
-$(function(){
-	$(window).scroll(function (){
-		$('.fadeInLeft').each(function(){
-			var elemPos = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll > elemPos - windowHeight + 300){
-				$(this).addClass('scrollin');
-			}
-		});
-	});
-});
-        </script>
+        <script type="text/javascript" src="js/loading.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/fadeInElement.js"></script>
     </body>
 </html>

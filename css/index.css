@@ -312,41 +312,36 @@ footer a {
     font-size: 20px;
 }
 
-.fadeInUp {
-	opacity : 0.1;
-	transform : translate(0, 50px);
-	transition : all 1000ms;
-	}
-
+.fadeIn {
+    opacity : 0;
+    transition : opacity 1s 0.1s;
+}
 /* 画面内に入った状態 */
-.fadeInUp.scrollin {
-	opacity : 1;
-	transform : translate(0, 0);
-	}
+.scrollIn {
+    opacity : 1;
+}
 
-    .fadeInRight {
-        opacity : 0.1;
-        transform : translate(50px, 0px);
-        transition : all 1000ms;
-        }
-    
-    /* 画面内に入った状態 */
-    .fadeInRight.scrollin {
-        opacity : 1;
-        transform : translate(0, 0);
-        }
+.fadeInUp.scrollIn {
+	animation:fadeInUp 1s;
+}
+@keyframes fadeInUp {
+    0% {transform : translate(0, 50%);} 100% {transform : translate(0, 0);}
+}
 
-        .fadeInLeft {
-            opacity : 0.1;
-            transform : translate(-50px, 0px);
-            transition : all 1000ms;
-            }
-        
-        /* 画面内に入った状態 */
-        .fadeInLeft.scrollin {
-            opacity : 1;
-            transform : translate(0, 0);
-            }
+.fadeInRight.scrollIn {
+    animation:fadeInRight 1s;
+}
+@keyframes fadeInRight {
+    0% {transform : translate(50%, 0);} 100% {transform : translate(0, 0);}
+}
+
+.fadeInLeft.scrollIn {
+    animation:fadeInLeft 1s;
+}
+@keyframes fadeInLeft {
+    0% {transform : translate(-50%, 0);} 100% {transform : translate(0, 0);}
+}
+
 
 
 @media (480px < width <= 960px) {

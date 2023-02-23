@@ -39,19 +39,26 @@ header .head a:nth-of-type(1){
 }
 
 .main h1{
-    text-align: right;
-    margin:2rem 5% 0 0 ;
+    text-align: center;
+    margin:2rem 0 1rem 68%;
+    width:30%;
+    font-size: 2rem;
 }
 
 .main h2{
     font-size: 2rem;
     letter-spacing:0.2rem;
     text-align: center;
+    width:70%;
+    margin:0 0 0 15% ;
+    overflow-wrap: break-word;
 }
 
 .main img{
     margin:5rem 0 0 20%;
     padding:0;
+    width:60%;
+    
 }
 
 .main p{
@@ -205,18 +212,20 @@ footer li{
 
     .main h1{
         text-align: right;
-        margin:2rem 5% 0 0 ;
-        font-size: 1.2rem;
+        margin:1.5rem 0 0 60% ;
+        font-size: 1.5rem;
     }
     
     .main h2{
-        font-size: 1rem;
+        font-size: 1.4rem;
         text-align: center;
-        margin:3rem 0 0 0;
+        margin:2rem 0 0 15%;
+        width:70%;
+        overflow-wrap: break-word;
     }
     
     .main img{
-        margin:5rem 0 0 20%;
+        margin:3rem 0 0 20%;
         padding:0;
         width:60%;
     }
@@ -253,9 +262,10 @@ footer li{
         margin:0;
     }
     .main h1{
-        margin:0;
-        padding:2rem 0 2rem 0;
+        margin:0 0 0 70%;
+        padding:0;
         font-size: 1.6rem;
+        width:30%;
     }
     .main .text{
         font-size: 0.8rem;
@@ -362,15 +372,18 @@ footer li{
     }
 
     .main h1{
-        text-align: left;
-        margin:2rem 0 0 2rem ;
-        font-size: 1rem;
+        margin:1.6rem 0 0 60% ;
+        width:30%;
+        font-size: 0.9rem;
+        overflow-wrap: break-word;
     }
     
     .main h2{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         text-align: center;
-        margin:1rem 0 0 0;
+        margin:1.6rem 0 0 20%;
+        width:60%;
+        overflow-wrap: break-word;
     }
     
     .main img{
